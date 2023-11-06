@@ -1,0 +1,17 @@
+{
+    "source": {
+        "include": ["src"]
+    },
+    "opts": {
+        "template": "node_modules/clean-jsdoc-theme",
+        "encoding": "utf8",
+        "destination": "./docs/html",
+        "theme_opts": {
+            "title": "Hexagons Docs",
+            "homepageTitle": "Hexagons Documentation",
+            "favicon": "public/hexagonsDocs2.ico",
+            "sections": ["Classes", "Modules", "Global", "Tutorials"]
+        }
+    },
+    "sourceType": "module"
+}
