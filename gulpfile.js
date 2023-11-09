@@ -13,6 +13,10 @@ gulp.task("build-css", () => {
     .pipe(gulp.dest("dist"));
 });
 
+gulp.task("copy-icon", () => {
+  return gulp.src("src/public/hexagons.ico").pipe(gulp.dest("dist"));
+});
+
 gulp.task("build-js", function () {
   return gulp
     .src(["src/HexagonCell.js", "src/HexagonField.js"])
@@ -27,7 +31,7 @@ gulp.task("build-js", function () {
 });
 
 gulp.task("session-start", (cb) => {
-  return gulp.series("build-css", "build-js")(cb);
+  return gulp.series("build-css", "build-js", "copy-icon")(cb);
 });
 
 gulp.task("watch", () => {
@@ -43,7 +47,7 @@ gulp.task("watch", () => {
     browserSync.reload
   );
   gulp.watch("src/*.js", gulp.series("build-js"), browserSync.reload);
-  gulp.watch("dist/html.html", browserSync.reload);
+  gulp.watch("dist/index.html", browserSync.reload);
 });
 
 gulp.task("default", gulp.series("session-start"));

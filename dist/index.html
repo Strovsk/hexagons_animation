@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/x-icon" href="hexagons.ico">
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="hexagon.min.css" />
     <title>Hexagon Animation</title>
 
     <style>
@@ -41,11 +41,11 @@
     </div>
     <div id="hexagon-container"></div>
 
-    <script src="Hexagon.js"></script>
+    <script src="hexagon.min.js"></script>
 
     <script>
       const container = document.getElementById("hexagon-container");
-      const hf = new Hexagon('hexagon-container');
+      const hf = new HexagonField('hexagon-container');
 
       hf.createFrom({ stopPoint: 4 });
     </script>
