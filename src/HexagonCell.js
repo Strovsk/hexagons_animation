@@ -8,7 +8,7 @@
 /**
  * @module
  */
-export default class HexagonCell {
+export class HexagonCell {
   /**
    * @constructor
    * @param {Object} size - Hexagon size

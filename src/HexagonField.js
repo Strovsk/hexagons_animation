@@ -1,9 +1,9 @@
-import HexagonCell from "./HexagonCell.js";
+import { HexagonCell } from "./HexagonCell.js";
 
 /**
  * @module
  */
-export default class HexagonField {
+export class HexagonField {
   /**
    *
    * @constructor
