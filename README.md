@@ -1,6 +1,8 @@
-![logo](https://raw.githubusercontent.com/Strovsk/hexagons_animation/main/public/hexagons.ico)
+# Hexagons Animation
 
-# Hexagon Animation Package
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Strovsk/hexagons_animation/main/public/hexagons.ico" />
+</p>
 
 This package provides a hexagon animation component for web applications.
 
