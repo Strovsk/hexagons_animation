@@ -1,3 +1,9 @@
+![nodejs](https://img.shields.io/badge/NodeJs-1b1b1b?style=for-the-badge&logo=Node.js)
+![webpack](https://img.shields.io/badge/Webpack-1b1b1b?style=for-the-badge&logo=webpack)
+![html](https://img.shields.io/badge/jsdocs-1b1b1b?style=for-the-badge&logo=readme)
+![javascript](https://img.shields.io/badge/javascript-1b1b1b?style=for-the-badge&logo=javascript)
+![css](https://img.shields.io/badge/css-1b1b1b?style=for-the-badge&logo=css3)
+
 # Hexagons Animation
 
 <p align="center">
