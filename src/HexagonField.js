@@ -1,4 +1,5 @@
 import { HexagonCell } from "./HexagonCell.js";
+import "../public/assets/css/styles.css";
 
 /**
  * @module

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="hexagons.ico">
+    <link rel="stylesheet" href="hexagon.min.css" />
+    <title>Hexagon Animation</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400&display=swap');
+
+      body {
+        display: grid;
+        place-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #e0e0e0;
+        font-family: Quicksand, sans-serif;
+        font-weight: 100;
+        overflow: hidden;
+      }
+
+      #hexagon-container {
+        position: absolute;
+      }
+
+      #content {
+        z-index: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Hexagon Animation</h1>
+      <div style="display: flex; flex-flow: row nowrap; justify-content: space-around;">
+        <a href="">Docs</a>
+        <a href="">Github</a>
+      </div>
+    </div>
+    <div id="hexagon-container"></div>
+
+    <script src="hexagon.min.js"></script>
+
+    <script>
+      const container = document.getElementById("hexagon-container");
+      const hf = new Hexagon('hexagon-container');
+
+      hf.createFrom({ stopPoint: 4 });
+    </script>
+  </body>
+</html>
