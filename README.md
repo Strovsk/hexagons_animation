@@ -11,6 +11,7 @@ This package provides a hexagon animation component for web applications.
 To use this package in your web application, follow these steps:
 
 2. Load HexagonAnimation CSS and JS resources in your HTML file:
+
    2.1. Load the css:
 
    ```html
@@ -26,14 +27,14 @@ To use this package in your web application, follow these steps:
       <script src="https://cdn.jsdelivr.net/gh/Strovsk/hexagons_animation@main/dist/hexagon.min.js">
    ```
 
-3. Add the `HexagonAnimation` component to your HTML file:
+3. Add the `Hexagon` component to your HTML file:
 
    ```html
    <div id="hexagon-container"></div>
 
    <script>
      const container = document.getElementById("hexagon-container");
-     const hf = new HexagonField("hexagon-container");
+     const hf = new Hexagon("hexagon-container");
 
      hf.createFrom({ stopPoint: 4 });
    </script>
