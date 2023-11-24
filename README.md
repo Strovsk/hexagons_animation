@@ -11,9 +11,18 @@ This package provides a hexagon animation component for web applications.
 To use this package in your web application, follow these steps:
 
 2. Load HexagonAnimation CSS and JS resources in your HTML file:
+   2.1. Load the css:
 
    ```html
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Strovsk/hexagons_animation@main/dist/hexagon.min.css">
+   <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/gh/Strovsk/hexagons_animation@main/dist/hexagon.min.css"
+   />
+   ```
+
+   2.2. Load the js:
+
+   ```html
       <script src="https://cdn.jsdelivr.net/gh/Strovsk/hexagons_animation@main/dist/hexagon.min.js">
    ```
 
