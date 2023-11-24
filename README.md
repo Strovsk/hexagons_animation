@@ -1,3 +1,5 @@
+![logo](https://raw.githubusercontent.com/Strovsk/hexagons_animation/main/public/hexagons.ico)
+
 # Hexagon Animation Package
 
 This package provides a hexagon animation component for web applications.
@@ -6,39 +8,36 @@ This package provides a hexagon animation component for web applications.
 
 To use this package in your web application, follow these steps:
 
-1. Install the package using `npm`:
+2. Load HexagonAnimation CSS and JS resources in your HTML file:
 
-   ```bash
-   npm install hexagon-animation
-   ```
-
-2. Import the `HexagonAnimation` component in your JavaScript file:
-
-   ```javascript
-   import HexagonAnimation from "hexagon-animation";
+   ```html
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Strovsk/hexagons_animation@main/dist/hexagon.min.css">
+      <script src="https://cdn.jsdelivr.net/gh/Strovsk/hexagons_animation@main/dist/hexagon.min.js">
    ```
 
 3. Add the `HexagonAnimation` component to your HTML file:
 
    ```html
-   <div id="hexagon-animation"></div>
+   <div id="hexagon-container"></div>
 
    <script>
-     const hexagonAnimation = new Hexagon();
-     hexagonAnimation.mount(document.getElementById("hexagon-animation"));
+     const container = document.getElementById("hexagon-container");
+     const hf = new HexagonField("hexagon-container");
+
+     hf.createFrom({ stopPoint: 4 });
    </script>
    ```
 
-4. Customize the animation by passing props to the `HexagonAnimation` component:
+## Contributing
 
-   ```javascript
-   const hexagonAnimation = new HexagonAnimation({
-     size: 100,
-     duration: 1000,
-     color: "#ff0000",
-   });
-   ```
+### Dev Server
 
-## Installation
+```bash
+npm run dev
+```
 
-To install this package, run the following command:
+### Build
+
+```bash
+npm run build
+```
