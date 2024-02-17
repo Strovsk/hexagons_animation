@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="hexagons.ico">
     <link rel="stylesheet" href="hexagon.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <title>Hexagons - How?</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
     </div>
     <div id="messages-container">
         <div id="left-message-controller">
-            <i class="bi bi-arrow-left-circle-fill" id="left-arrow"></i>
+            <i class="bi bi-arrow-left-circle-fill hide" id="left-arrow"></i>
         </div>
         <section id="messages">
             <p class="message show" id="info-A">First of all, We'll need to create the html structure. See these two divs above, they will become the final hexagon</p>
@@ -31,7 +32,50 @@
             <i class="bi bi-arrow-right-circle-fill" id="right-arrow"></i>
         </div>
     </div>
-    <section id="Context"></section>
+    <section id="Context">
+        <div class="code-context show">
+            <code class="prettyprint lang-html">
+                &lt;div id="central-cell-shadow" class="central-cell-shadow"&gt; // The black Square<br>
+                    &nbsp;&nbsp;&nbsp;&lt;div id="central-cell" class="central-cell"&gt;&lt;/div&gt; // The white circle<br>
+                &lt;/div&gt;
+            </code>
+        </div>
+        <div class="code-context">
+            <code class="prettyprint lang-css">
+                .central-cell {<br>
+                    &nbsp;&nbsp;&nbsp;width: 150px;<br>
+                    &nbsp;&nbsp;&nbsp;height: 150px;<br>
+                    &nbsp;&nbsp;&nbsp;margin: 0;<br>
+                    &nbsp;&nbsp;&nbsp;border-radius: 0;<br>
+                    &nbsp;&nbsp;&nbsp;clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);<br>
+                }
+            </code>
+        </div>
+        <div class="code-context">
+            <code class="prettyprint lang-css">
+                .central-cell::after {<br>
+                    &nbsp;&nbsp;&nbsp;content: "";<br>
+                    &nbsp;&nbsp;&nbsp;display: block;<br>
+                    &nbsp;&nbsp;&nbsp;margin-left: -4px;<br>
+                    &nbsp;&nbsp;&nbsp;width: 150px;<br>
+                    &nbsp;&nbsp;&nbsp;height: 150px;<br>
+                
+                    &nbsp;&nbsp;&nbsp;filter: opacity(1);<br>
+                    &nbsp;&nbsp;&nbsp;background-color: rgb(197, 197, 197);<br>
+                    &nbsp;&nbsp;&nbsp;clip-path: polygon(25% 0%, 34% 0%, 8% 50%, 34% 100%, 25% 100%, 0% 50%);<br>
+                }
+            </code>
+        </div>
+        <div class="code-context">
+            <code class="prettyprint lang-css">
+                .central-cell-shadow {<br>
+                    &nbsp;&nbsp;&nbsp;filter: drop-shadow(-4px 0 5px rgba(0, 0, 0, 0.3));<br>
+                }
+            </code>
+        </div>
+        <div class="code-context">
+            It's too code. See all animations in <a href="https://github.com/Strovsk/hexagons_animation">Github</a>
+        </div>
     </section>
     <script src="/js/how.js"></script>
 </body>

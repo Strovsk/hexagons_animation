@@ -12,7 +12,8 @@ body {
     height: 200px;
 }
 
-#messages-container {
+#messages-container,
+#Context {
     width: 80%;
     height: 250px;
     display: flex;
@@ -53,6 +54,16 @@ body {
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
+#left-arrow.hide,
+#right-arrow.hide {
+    color: #666;
+}
+
+#left-arrow.hide:hover,
+#right-arrow.hide:hover {
+    color: #666;
+}
+
 .text.bold {
     font-weight: bold;
 }
@@ -60,6 +71,14 @@ body {
 .text.code {
     font-weight: bold;
     color: rgb(226, 77, 102)
+}
+
+.code-context {
+    display: none;
+}
+
+.code-context.show {
+    display: block;
 }
 
 /*  media hover */
