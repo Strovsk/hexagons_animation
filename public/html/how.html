@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/how.css">
+    <link rel="icon" type="image/x-icon" href="hexagons.ico">
+    <link rel="stylesheet" href="hexagon.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Hexagons - How?</title>
+</head>
+<body>
+    <h1>How it works?</h1>
+    <div id="first-setup">
+        <div id="central-cell-shadow" class="central-cell-shadow">
+            <div id="central-cell" class="central-cell"></div>
+        </div>
+    </div>
+    <div id="messages-container">
+        <div id="left-message-controller">
+            <i class="bi bi-arrow-left-circle-fill" id="left-arrow"></i>
+        </div>
+        <section id="messages">
+            <p class="message show" id="info-A">First of all, We'll need to create the html structure. See these two divs above, they will become the final hexagon</p>
+            <p class="message" id="info-B">On this step, let to set the internal div (circle) shape using the clip-path css property</p>
+            <p class="message" id="info-C">The next consists to apply  <span class="text bold">Edge Shadow</span> using the clip-path css property too in the <code class="text code">::after</code> pseudo element css property</p>
+            <p class="message" id="info-D">Apply the background shadow. It's a realy thorough detail applied to the edge shadow. In the final result, works like an extension</p>
+            <p class="message" id="info-E">Animate it!</p>
+        </section>
+        <div id="right-message-controller">
+            <i class="bi bi-arrow-right-circle-fill" id="right-arrow"></i>
+        </div>
+    </div>
+    <section id="Context"></section>
+    </section>
+    <script src="/js/how.js"></script>
+</body>
+</html>

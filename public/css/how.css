@@ -1,0 +1,275 @@
+body {
+    background-color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+#first-setup {
+    width: 200px;
+    height: 200px;
+}
+
+#messages-container {
+    width: 80%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#messages {
+    position: relative;
+    width: 60%;
+}
+
+.message {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    display: none;
+    opacity: 0;
+    transition: 0.3s ease-in-out all;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+}
+
+.message.show {
+    display: block;
+    opacity: 1;
+}
+
+#left-arrow,
+#right-arrow {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+    color: #1b1b1b;
+    /* apply backdrop shadow */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.text.bold {
+    font-weight: bold;
+}
+
+.text.code {
+    font-weight: bold;
+    color: rgb(226, 77, 102)
+}
+
+/*  media hover */
+@media (hover: hover) {
+
+    #left-arrow:hover,
+    #right-arrow:hover {
+        color: #e0e0e0;
+    }
+}
+
+/* Central Cell Shadow And Shadow */
+
+.central-cell-shadow {
+    width: 150px;
+    height: 150px;
+    background: #1b1b1b;
+    position: relative;
+    transition: .3s ease-in-out all;
+}
+
+.central-cell-shadow.step-3 {
+    width: auto;
+    height: auto;
+    filter: drop-shadow(-4px 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.central-cell-shadow.step-4 {
+    width: auto;
+    height: auto;
+    filter: drop-shadow(-4px 0 5px rgba(0, 0, 0, 0.3));
+    animation: hexagon_floor 3s linear infinite alternate-reverse;
+}
+
+/* Central Cell */
+
+.central-cell {
+    width: 75px;
+    height: 75px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: 10px;
+    transition: 0.5s ease-in-out all;
+    position: absolute;
+}
+
+.central-cell::after {
+    filter: opacity(0);
+    background-color: rgb(197, 197, 197);
+    clip-path: polygon(25% 0%, 34% 0%, 8% 50%, 34% 100%, 25% 100%, 0% 50%);
+}
+
+.central-cell.step-1 {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    border-radius: 0;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.central-cell.step-2::after {
+    content: "";
+    display: block;
+    margin-left: -4px;
+    width: 150px;
+    height: 150px;
+    transition: 0.3 ease-in-out all;
+
+    filter: opacity(0);
+    background-color: rgb(197, 197, 197);
+    clip-path: polygon(25% 0%, 34% 0%, 8% 50%, 34% 100%, 25% 100%, 0% 50%);
+}
+
+.central-cell.step-2 {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    border-radius: 0;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.central-cell.step-2::after {
+    content: "";
+    display: block;
+    margin-left: -4px;
+    width: 150px;
+    height: 150px;
+
+    filter: opacity(1);
+    background-color: rgb(197, 197, 197);
+    clip-path: polygon(25% 0%, 34% 0%, 8% 50%, 34% 100%, 25% 100%, 0% 50%);
+}
+
+.central-cell.step-3 {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    border-radius: 0;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.central-cell.step-3::after {
+    content: "";
+    display: block;
+    margin-left: -4px;
+    width: 150px;
+    height: 150px;
+
+    filter: opacity(1);
+    background-color: rgb(197, 197, 197);
+    clip-path: polygon(25% 0%, 34% 0%, 8% 50%, 34% 100%, 25% 100%, 0% 50%);
+}
+
+.central-cell.step-4 {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    border-radius: 0;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+    animation: hexagon_size 3s linear infinite alternate-reverse;
+    animation-delay: 0s;
+}
+
+.central-cell.step-4::after {
+    content: "";
+    display: block;
+    margin-left: -4px;
+    width: 150px;
+    height: 150px;
+
+    filter: opacity(1);
+    background-color: rgb(197, 197, 197);
+    clip-path: polygon(25% 0%, 34% 0%, 8% 50%, 34% 100%, 25% 100%, 0% 50%);
+
+    animation: hexagon_shadow 2s linear infinite alternate-reverse;
+    animation-delay: 1s;
+}
+
+/* Animations */
+
+@keyframes hexagon_floor {
+
+    0%,
+    28% {
+        filter: drop-shadow(-4px 0 5px rgba(0, 0, 0, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(-4px 0 5px rgba(0, 0, 0, 0.3));
+    }
+
+    50%,
+    64% {
+        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0))
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0))
+    }
+}
+
+@keyframes hexagon_shadow {
+
+    /* clip-path: polygon(25% 0%, 34% 0, 7% 50%, 34% 100%, 25% 100%, 0% 50%); */
+    0%,
+    28% {
+        clip-path: polygon(25% 0%, 34% 0%, 8% 50%, 34% 100%, 25% 100%, 0% 50%);
+        background-color: rgb(197, 197, 197);
+        filter: opacity(1);
+    }
+
+    50% {
+        clip-path: polygon(25% 0%, 34% 0%, 8% 50%, 34% 100%, 25% 100%, 0% 50%);
+        background-color: rgb(197, 197, 197);
+        filter: opacity(1);
+    }
+
+    50%,
+    64% {
+        clip-path: polygon(15% 0%, 30% 0%, 5% 50%, 30% 100%, 20% 100%, 0% 50%);
+        background-color: rgb(197, 197, 197);
+        filter: opacity(0.2);
+    }
+
+    100% {
+        clip-path: polygon(15% 0%, 30% 0%, 5% 50%, 30% 100%, 20% 100%, 0% 50%);
+        background-color: rgb(197, 197, 197);
+        filter: opacity(0.2);
+    }
+}
+
+@keyframes hexagon_size {
+
+    /* transform: scale(1); */
+    0%,
+    28% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    50%,
+    64% {
+        transform: scale(1.01);
+    }
+
+    100% {
+        transform: scale(1.01);
+    }
+}
