@@ -10,14 +10,14 @@ export class HexagonField {
    * @constructor
    * @param {string} containerId - The container id whitout #
    * @param {number} nMax - The number of hexagons to be created
-   * @param {number} deep - The deep of the recursion
+   * @param {number} depth - The depth of the recursion
    */
-  constructor(containerId = "hexagon_container", nMax = 40, deep = 5) {
+  constructor(containerId = "hexagon_container", nMax = 40, depth = 5) {
     this.containerId = containerId;
     this.container = document.getElementById(this.containerId);
     this.allElementsList = [];
     this.nMax = nMax;
-    this.deep = deep;
+    this.depth = depth;
 
     this.patternDefault = {
       "-1": (size, element, stopP) => {
