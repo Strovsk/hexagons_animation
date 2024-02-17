@@ -16,7 +16,8 @@ module.exports = merge(common, {
 
   devServer: {
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, "public"),
+      watch: true,
     },
     compress: true,
     port: 5000,
