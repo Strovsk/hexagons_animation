@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Dev server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "group": {
+        "kind": "none",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "icon": {
+        "color": "terminal.ansiYellow",
+        "id": "server"
+      },
+      "detail": "Starts the development server"
+    }
+  ]
+}
