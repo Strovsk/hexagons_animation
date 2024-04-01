@@ -7,7 +7,7 @@
     "dev": "webpack serve --config webpack.dev.js --env NODE_ENV=development",
     "build": "webpack --config webpack.prod.js --env NODE_ENV=production",
     "test": "jest",
-    "docs:build": "jsdoc -c jsdocs.jsconfig.json --verbose",
+    "docs:build": "jsdoc -c jsdocs.jsconfig.json --verbose -u docs/tutorials",
     "docs:watch": "nodemon -e js --watch src --exec \"npm run docs:build\"",
     "docs:serve": "node docs/html/server.js"
   },

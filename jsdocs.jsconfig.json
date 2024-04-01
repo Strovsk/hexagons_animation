@@ -1,6 +1,9 @@
 {
     "source": {
-        "include": ["src"]
+        "include": [
+            "src",
+            "README.md"
+        ]
     },
     "opts": {
         "template": "node_modules/clean-jsdoc-theme",
@@ -10,7 +13,21 @@
             "title": "Hexagons Docs",
             "homepageTitle": "Hexagons Documentation",
             "favicon": "public/hexagonsDocs2.ico",
-            "sections": ["Classes", "Modules", "Global", "Tutorials"]
+            "sections": [
+                "Tutorials",
+                "Classes"
+            ],
+            "meta": [
+                {
+                    "name": "author",
+                    "content": "Thiago Santa Clara Pereira"
+                },
+                {
+                    "name": "description",
+                    "content": "Hexagons is a library for creating hexagonal grids in JavaScript."
+                }
+            ],
+            "footer": "This is footer"
         }
     },
     "sourceType": "module"

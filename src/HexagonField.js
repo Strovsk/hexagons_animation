@@ -3,6 +3,7 @@ import "../public/assets/css/styles.css";
 
 /**
  * @module
+ * @namespace Hexagon.Field
  */
 export class HexagonField {
   /**

@@ -7,6 +7,7 @@
 
 /**
  * @module
+ * @namespace Hexagon.Cell
  */
 export class HexagonCell {
   /**
